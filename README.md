@@ -32,7 +32,7 @@ These instructions will enable you to get the Pubguard library running on your A
 
 ## Prerequisites
 
-Before installing the pubguard library you will need an application key which is available from your account, in order to receive a key please signup from https://bidstack.pubguard.com or email support@pubguard.com. The key is used in both the iOS and Android installations.
+Before installing the pubguard library you will need an application key which is available from your account, in order to receive a key please signup from http://dashboard.pubguard.com or email support@pubguard.com. The key is used in both the iOS and Android installations.
 
 ```
 pubguardKey = "xxxxxxxxxxxxxxxxxxx"
