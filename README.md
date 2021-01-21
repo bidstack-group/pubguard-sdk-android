@@ -14,7 +14,8 @@ Table of contents
 =================
 
 <!--ts-->
-* [Android](#android)
+* [Getting Started](#getting-started)
+* [Integrating](#integrating)
 * [Change Log](#change-log)
 * [Library Size](#library-size)
 * [SDK support](#support)
@@ -27,7 +28,7 @@ Table of contents
 
 # Getting Started
 
-These instructions will enable you to get the Pubguard library running on your iOS/Android/Unity app.
+These instructions will enable you to get the Pubguard library running on your Android app.
 
 ## Prerequisites
 
@@ -39,7 +40,7 @@ pubguardKey = "xxxxxxxxxxxxxxxxxxx"
 
 ---
 
-# Android
+# Integrating
 
 
 The latest version of the Android Pubguard Library is **1.0.0**
