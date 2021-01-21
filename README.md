@@ -185,7 +185,7 @@ Here is a guide based based on our compiling with our test apps, please bear in 
 These are SDKs designed specifically for serving advertising content into your app, if you would like information on a version or vendor that is not on this list please email support@pubguard.com
 
 | Company/Product | Android SDK identifier | Android versions |
-| ------- | ----- | ------- | ------- | ------- |
+| --- | --- | --- |
 | AdColony | com.adcolony:sdk |  4.1.0 - 4.3.0  |
 | AdMob | com.google.android.gms:play-services-ads | 19.0.0 - 19.5.0 |
 | Amazon Mobile Ads | com.amazon.android:mobile-ads | 6.0.0 |
