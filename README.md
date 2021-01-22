@@ -133,7 +133,7 @@ public class MyApplication extends Application {
         super.onCreate();
 
         try {
-            Pubguard.init(application, "YOUR_PUBGUARD_KEY", BuildConfig.VERSION_NAME);
+            Pubguard.init(application, "YOUR_PUBGUARD_KEY");
         } catch (Exception e) {
             Log.e(TAG, "Pubguard Init exception: " + e.getMessage());
         }
@@ -144,9 +144,6 @@ public class MyApplication extends Application {
 **Note** All initialization parameters are mandatory and exception will be thrown if null or empty string is passed.
   - `application` is your apps `Application` class
   - `YOUR_PUBGUARD_KEY` is a `String` of your publisher key that can be found in Pubguard console
-  - `BuildConfig.VERSION_NAME` is a `String` of your app version name that is set in module build.gradle
-
-
 
 ---
 
