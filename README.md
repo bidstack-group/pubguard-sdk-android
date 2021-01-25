@@ -28,7 +28,8 @@ Table of contents
 
 # Getting Started
 
-These instructions will enable you to get the Pubguard library running on your Android app.
+These instructions will enable you to get the Pubguard library running on your Android app.  
+iOS instructions can be found [here](https://github.com/bidstack-group/pubguard-sdk-ios)
 
 ## Prerequisites
 
