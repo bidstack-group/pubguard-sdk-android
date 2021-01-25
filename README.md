@@ -1,4 +1,4 @@
-![alt text](images/pg-logo-hires.jpg)
+![alt text](images/pg-logo.png)
 
 # Pubguard Android Library
 
@@ -78,42 +78,42 @@ Pubguard supports Android Gradle Plugin 3.4.0 - 4.1.1 and Gradle Wrapper 5.6 - 6
 
   ```groovy
   apply plugin: 'com.bidstack.pubguard.aspectj-ext'
-  
+
   android {
       compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
   }
-  
+
   dependencies {
-    
+
     // Pubguard
     implementation files('libs/pubguard.aar')
-  
+
     // android
     implementation "androidx.core:core:1.3.1"
     implementation 'com.google.android.gms:play-services-basement:[GOOGLE_AD_VERSION]'
     implementation 'androidx.webkit:webkit:1.2.0'
-  
+
     // kotlin
     implementation "androidx.core:core-ktx:1.3.1"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3'
-  
+
     // networking
     implementation 'com.squareup.retrofit2:retrofit:2.6.3'
-    
+
     // networking  converters
     implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.squareup.retrofit2:converter-protobuf:2.6.3'
     implementation 'com.google.protobuf:protobuf-java:3.6.1'
-    
+
   }
   ```
-  
+
 
 **Note** that we require `implementation 'com.google.android.gms:play-services-basement:[GOOGLE_AD_VERSION]'`
 [GOOGLE_AD_VERSION] Version is based on your google ads version as per above. Even if you are not using Google ads, you still need to add support for Google services.
