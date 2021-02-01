@@ -16,7 +16,7 @@ Table of contents
 <!--ts-->
 * [Getting Started](#getting-started)
 * [Integrating](#integrating)
-* [R8 / ProGuard](#r8-proguard)
+* [R8 / ProGuard](#r8-/-proguard)
 * [Change Log](#change-log)
 * [Library Size](#library-size)
 * [SDK support](#support)
