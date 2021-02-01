@@ -4,7 +4,7 @@
 
 A guide to installing Pubguard on your Android application
 
-The Pubguard Library is solution that monitors the advertising content flowing through your mobile app, protecting against unwanted content and optimising revenues.
+The Pubguard Library is a solution that monitors the advertising content flowing through your mobile app, protecting against unwanted content and optimizing revenues.
 
 The data from the library is then accessible via your account on the Pubguard interface where you can set up preferences, alerts and browse the gallery.
 
@@ -16,6 +16,7 @@ Table of contents
 <!--ts-->
 * [Getting Started](#getting-started)
 * [Integrating](#integrating)
+* [R8 / ProGuard](#r8-proguard)
 * [Change Log](#change-log)
 * [Library Size](#library-size)
 * [SDK support](#support)
@@ -33,7 +34,7 @@ iOS instructions can be found [here](https://github.com/bidstack-group/pubguard-
 
 ## Prerequisites
 
-Before installing the pubguard library you will need an application key which is available from your account, in order to receive a key please signup from http://dashboard.pubguard.com or email support@pubguard.com. The key is used in both the iOS and Android installations.
+Before installing the Pubguard library you will need an application key that is available from your account, to receive a key please sign up from http://dashboard.pubguard.com or email support@pubguard.com. The key is used in both the iOS and Android installations.
 
 ```
 pubguardKey = "xxxxxxxxxxxxxxxxxxx"
@@ -48,18 +49,20 @@ The latest version of the Android Pubguard Library is **1.0.0**
 
 Pubguard supports Android Gradle Plugin 3.4.0 - 4.1.1 and Gradle Wrapper 5.6 - 6.8
 
-**Note: do not minify the Pubguard library**
-
-
-
 ### Installing locally
 
+* Make sure Multidex is enabled ([Multidex enabling instructions](https://developer.android.com/studio/build/multidex))
 * Copy pubguard.aar and aspectj.jar into your main app module libs folder
 * Into project's `build.gradle`  add:
 
   ```groovy
   buildscript {
+      repositories {
+          google()
+          jcenter()
+      }
       dependencies {
+          classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.21"
           classpath files('app/libs/aspectj.jar')
           classpath "org.aspectj:aspectjtools:1.9.4"
           classpath "org.aspectj:aspectjrt:1.9.4"
@@ -68,6 +71,8 @@ Pubguard supports Android Gradle Plugin 3.4.0 - 4.1.1 and Gradle Wrapper 5.6 - 6
   }
   allprojects {
     repositories {
+        google()
+        jcenter()
         flatDir {
             dirs "libs"
         }
@@ -114,19 +119,19 @@ Pubguard supports Android Gradle Plugin 3.4.0 - 4.1.1 and Gradle Wrapper 5.6 - 6
   ```
 
 
-**Note** that we require `implementation 'com.google.android.gms:play-services-basement:[GOOGLE_AD_VERSION]'`
+**Note** that it is required to add `implementation 'com.google.android.gms:play-services-basement:[GOOGLE_AD_VERSION]'`
 [GOOGLE_AD_VERSION] Version is based on your google ads version as per above. Even if you are not using Google ads, you still need to add support for Google services.
 
 
 
 #### Initialising the Library
 
-The Pubguard Library should be initialized once at app launch. Here's an example of how to call the init method in Application class:
-```
+The Pubguard SDK should be initialized once at app launch. It is recommended to initialize the SDK in the Application subclass. Here's an example of how to call the init method in the Application subclass:
+```java
 import com.bidstack.pubguard.Pubguard;
 …
 
-public class MyApplication extends Application {
+public class MyApplication extends MultiDexApplication {
 
     @Override public void onCreate() {
         super.onCreate();
@@ -140,11 +145,57 @@ public class MyApplication extends Application {
 }
 ```
 
-**Note** All initialization parameters are mandatory and exception will be thrown if null or empty string is passed.
+**Note** All initialization parameters are mandatory and an exception will be thrown if null or empty string is passed.
   - `application` is your apps `Application` class
-  - `YOUR_PUBGUARD_KEY` is a `String` of your publisher key that can be found in Pubguard console
+  - `YOUR_PUBGUARD_KEY` is a `String` of your publisher key that can be found in the Pubguard console
 
 ---
+
+## R8 / ProGuard
+
+### R8
+
+If you are using R8 then add the following rules:
+```
+-keep public class com.bidstack.pubguard.Adguard$ConfigRequest { public *; }
+-keep public class com.bidstack.pubguard.Adguard$ConfigResponse { public *; }
+-keep public class com.bidstack.pubguard.Adguard$AdNetworkReportRequest { public *; }
+-keep public class com.bidstack.pubguard.Adguard$ClickRequest { public *; }
+-keep public class com.bidstack.pubguard.Adguard$CrashReportRequest { public *; }
+-keep public class com.bidstack.pubguard.Adguard$CrashReportResponse { public *; }
+-keep public class com.bidstack.pubguard.Adguard$ImpressionRequest { public *; }
+-keep public class com.bidstack.pubguard.Adguard$ImpressionResponse { public *; }
+```
+
+### ProGuard
+
+If you are using ProGuard then add the following rules:
+```
+-optimizations !code/simplification/arithmetic,!code/simplification/cast,!field/*,!class/merging/*
+-dontpreverify
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+
+-dontwarn module-info
+
+-keep class com.bidstack.aspectj** { *; }
+-dontwarn com.bidstack.aspectj**
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+-keep public class com.bidstack.pubguard.Adguard$ConfigRequest { public *; }
+-keep public class com.bidstack.pubguard.Adguard$ConfigResponse { public *; }
+-keep public class com.bidstack.pubguard.Adguard$AdNetworkReportRequest { public *; }
+-keep public class com.bidstack.pubguard.Adguard$ClickRequest { public *; }
+-keep public class com.bidstack.pubguard.Adguard$CrashReportRequest { public *; }
+-keep public class com.bidstack.pubguard.Adguard$CrashReportResponse { public *; }
+-keep public class com.bidstack.pubguard.Adguard$ImpressionRequest { public *; }
+-keep public class com.bidstack.pubguard.Adguard$ImpressionResponse { public *; }
+```
+
+Pubguard SDK uses Retrofit as a dependency, so make sure to include also Retrofit's ProGuard rules, they can be found [here](https://github.com/square/retrofit/blob/master/retrofit/src/main/resources/META-INF/proguard/retrofit2.pro).
 
 ## Changelog
 
@@ -155,23 +206,22 @@ For all release notes and previous versions please see our [changelog](changelog
 
 ## Library Size
 
-The Pubguard team understands the importance of having a small footprint and our library is optimised to be as lightweight as possible on both iOS and Android.
+The Pubguard team understands the importance of having a small footprint and our library is optimized to be as lightweight as possible on both iOS and Android.
 
-Here is a guide based based on our compiling with our test apps, please bear in mind the size may increase or reduce based on the amount of SDKs you use and the amount of shared dependancies.
+Here is a guide based on our compiling with our test apps, please bear in mind the size may increase or reduce based on the number of SDKs you use and the number of shared dependencies.
 
 | Dependencies | Size |
 | --- | --: |
-| Pubguard SDK | ~586KB |
+| Pubguard SDK | ~375KB |
 | Play Services Basement | ~324KB |
 | Core Kotlin Extensions | ~159KB |
 | Kotlin Stdlib Jdk7 | ~22KB |
 | Kotlin Coroutines Core | ~1,7MB |
 | Kotlin Coroutines Android | ~20KB |
-| Retrofit2 Converter GSON | ~5KB |
-| GSON | ~240KB |
+| Retrofit2 | ~129KB |
 | Retrofit2 Converter Protobuf | ~5KB |
 | Protobuf Java | ~1,4MB |
-| **Total** | ~4.5MB |
+| **Total** | ~4.1MB |
 
 ---
 
