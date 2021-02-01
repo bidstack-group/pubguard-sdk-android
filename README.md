@@ -215,7 +215,7 @@ Here is a guide based on our compiling with our test apps, please bear in mind t
 
 | Dependencies | Size |
 | --- | --: |
-| Pubguard SDK | ~359KB |
+| Pubguard SDK | ~375KB |
 | Play Services Basement | ~324KB |
 | Core Kotlin Extensions | ~159KB |
 | Kotlin Stdlib Jdk7 | ~22KB |
