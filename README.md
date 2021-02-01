@@ -83,7 +83,10 @@ Pubguard supports Android Gradle Plugin 3.4.0 - 4.1.1 and Gradle Wrapper 5.6 - 6
 * Into module's `build.gradle` add:
 
   ```groovy
-  apply plugin: 'com.bidstack.pubguard.aspectj-ext'
+  plugins {
+    id 'com.android.application'
+    id 'com.bidstack.pubguard.aspectj-ext'
+  }
 
   android {
       compileOptions {
@@ -212,7 +215,7 @@ Here is a guide based on our compiling with our test apps, please bear in mind t
 
 | Dependencies | Size |
 | --- | --: |
-| Pubguard SDK | ~375KB |
+| Pubguard SDK | ~359KB |
 | Play Services Basement | ~324KB |
 | Core Kotlin Extensions | ~159KB |
 | Kotlin Stdlib Jdk7 | ~22KB |
