@@ -160,7 +160,7 @@ public class MyApplication extends MultiDexApplication {
 If you are using R8 then add the following rules:
 ```
 -keep class com.bidstack** { *; }
--dontwarn com.bidstck**
+-dontwarn com.bidstack**
 ```
 
 ### ProGuard
@@ -179,7 +179,7 @@ If you are using ProGuard then add the following rules:
 }
 
 -keep class com.bidstack** { *; }
--dontwarn com.bidstck**
+-dontwarn com.bidstack**
 ```
 
 Pubguard SDK uses Retrofit as a dependency, so make sure to include also Retrofit's ProGuard rules, they can be found [here](https://github.com/square/retrofit/blob/master/retrofit/src/main/resources/META-INF/proguard/retrofit2.pro).
