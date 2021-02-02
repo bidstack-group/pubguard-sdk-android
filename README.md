@@ -160,14 +160,16 @@ public class MyApplication extends MultiDexApplication {
 
 If you are using R8 then add the following rules:
 ```
--keep public class com.bidstack.pubguard.Adguard$ConfigRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$ConfigResponse { public *; }
--keep public class com.bidstack.pubguard.Adguard$AdNetworkReportRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$ClickRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$CrashReportRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$CrashReportResponse { public *; }
--keep public class com.bidstack.pubguard.Adguard$ImpressionRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$ImpressionResponse { public *; }
+-keep,allowobfuscation class com.bidstack.pubguard.aspect.AspectAd { public *; }
+-keepnames public class com.bidstack.pubguard.Versions { public *; }
+-keepnames public class com.bidstack.pubguard.Adguard$ConfigRequest { public *; }
+-keepnames public class com.bidstack.pubguard.Adguard$ConfigResponse { public *; }
+-keepnames public class com.bidstack.pubguard.Adguard$AdNetworkReportRequest { public *; }
+-keepnames public class com.bidstack.pubguard.Adguard$ClickRequest { public *; }
+-keepnames public class com.bidstack.pubguard.Adguard$CrashReportRequest { public *; }
+-keepnames public class com.bidstack.pubguard.Adguard$CrashReportResponse { public *; }
+-keepnames public class com.bidstack.pubguard.Adguard$ImpressionRequest { public *; }
+-keepnames public class com.bidstack.pubguard.Adguard$ImpressionResponse { public *; }
 ```
 
 ### ProGuard
@@ -188,14 +190,16 @@ If you are using ProGuard then add the following rules:
     public static <fields>;
 }
 
--keep public class com.bidstack.pubguard.Adguard$ConfigRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$ConfigResponse { public *; }
--keep public class com.bidstack.pubguard.Adguard$AdNetworkReportRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$ClickRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$CrashReportRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$CrashReportResponse { public *; }
--keep public class com.bidstack.pubguard.Adguard$ImpressionRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$ImpressionResponse { public *; }
+-keep,allowobfuscation class com.bidstack.pubguard.aspect.AspectAd { public *; }
+-keepnames public class com.bidstack.pubguard.Versions { public *; }
+-keepnames public class com.bidstack.pubguard.Adguard$ConfigRequest { public *; }
+-keepnames public class com.bidstack.pubguard.Adguard$ConfigResponse { public *; }
+-keepnames public class com.bidstack.pubguard.Adguard$AdNetworkReportRequest { public *; }
+-keepnames public class com.bidstack.pubguard.Adguard$ClickRequest { public *; }
+-keepnames public class com.bidstack.pubguard.Adguard$CrashReportRequest { public *; }
+-keepnames public class com.bidstack.pubguard.Adguard$CrashReportResponse { public *; }
+-keepnames public class com.bidstack.pubguard.Adguard$ImpressionRequest { public *; }
+-keepnames public class com.bidstack.pubguard.Adguard$ImpressionResponse { public *; }
 ```
 
 Pubguard SDK uses Retrofit as a dependency, so make sure to include also Retrofit's ProGuard rules, they can be found [here](https://github.com/square/retrofit/blob/master/retrofit/src/main/resources/META-INF/proguard/retrofit2.pro).
