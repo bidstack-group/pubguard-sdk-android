@@ -133,7 +133,7 @@ The Pubguard SDK should be initialized once at app launch. It is recommended to 
 import com.bidstack.pubguard.Pubguard;
 …
 
-public class MyApplication extends MultiDexApplication {
+public class MyApplication extends Application {
 
     @Override public void onCreate() {
         super.onCreate();
