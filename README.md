@@ -51,7 +51,6 @@ Pubguard supports Android Gradle Plugin 3.4.0 - 4.1.1 and Gradle Wrapper 5.6 - 6
 
 ### Installing locally
 
-* Make sure Multidex is enabled ([Multidex enabling instructions](https://developer.android.com/studio/build/multidex))
 * Copy pubguard.aar and aspectj.jar into your main app module libs folder
 * Into project's `build.gradle`  add:
 
@@ -134,7 +133,7 @@ The Pubguard SDK should be initialized once at app launch. It is recommended to 
 import com.bidstack.pubguard.Pubguard;
 …
 
-public class MyApplication extends MultiDexApplication {
+public class MyApplication extends Application {
 
     @Override public void onCreate() {
         super.onCreate();
@@ -160,14 +159,8 @@ public class MyApplication extends MultiDexApplication {
 
 If you are using R8 then add the following rules:
 ```
--keep public class com.bidstack.pubguard.Adguard$ConfigRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$ConfigResponse { public *; }
--keep public class com.bidstack.pubguard.Adguard$AdNetworkReportRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$ClickRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$CrashReportRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$CrashReportResponse { public *; }
--keep public class com.bidstack.pubguard.Adguard$ImpressionRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$ImpressionResponse { public *; }
+-keep class com.bidstack** { *; }
+-dontwarn com.bidstack**
 ```
 
 ### ProGuard
@@ -181,21 +174,12 @@ If you are using ProGuard then add the following rules:
 
 -dontwarn module-info
 
--keep class com.bidstack.aspectj** { *; }
--dontwarn com.bidstack.aspectj**
-
 -keepclassmembers class **.R$* {
     public static <fields>;
 }
 
--keep public class com.bidstack.pubguard.Adguard$ConfigRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$ConfigResponse { public *; }
--keep public class com.bidstack.pubguard.Adguard$AdNetworkReportRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$ClickRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$CrashReportRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$CrashReportResponse { public *; }
--keep public class com.bidstack.pubguard.Adguard$ImpressionRequest { public *; }
--keep public class com.bidstack.pubguard.Adguard$ImpressionResponse { public *; }
+-keep class com.bidstack** { *; }
+-dontwarn com.bidstack**
 ```
 
 Pubguard SDK uses Retrofit as a dependency, so make sure to include also Retrofit's ProGuard rules, they can be found [here](https://github.com/square/retrofit/blob/master/retrofit/src/main/resources/META-INF/proguard/retrofit2.pro).
