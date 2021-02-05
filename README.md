@@ -155,7 +155,7 @@ public class MyApplication extends Application {
 
 ## R8 / ProGuard
 
-Please keep all classes that are related for ad network, that you use.
+Please keep all classes that are related to the ad network, that you use.
 <details>
   <summary>Click to expand example</summary>
 
