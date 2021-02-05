@@ -155,6 +155,54 @@ public class MyApplication extends Application {
 
 ## R8 / ProGuard
 
+Please keep all classes that are related for ad network, that you use.
+<details>
+  <summary>Click to expand example</summary>
+
+  ```
+  -keep class tv.teads.** { *; }
+  -dontwarn tv.teads.**
+
+  -keep class com.google.android.exoplayer2.** { *; }
+  -dontwarn com.google.android.exoplayer2.**
+
+  -keep class com.adcolony.** { *; }
+  -dontwarn com.adcolony.**
+
+  -keep class com.iab.omid.library.adcolony.** { *; }
+  -dontwarn com.iab.omid.library.adcolony.**
+
+  -keep class com.aerserv.**
+  -dontwarn com.aerserv.**
+
+  -keep class com.smaato.** { *; }
+  -dontwarn com.smaato.**
+
+  -keep class com.inmobi.** { *; }
+  -dontwarn com.inmobi.**
+
+  -keep class com.rfm.** { *; }
+
+  -keep class com.amazon.** { *; }
+
+  -keep class com.millennialmedia.** { *; }
+
+  -keep class com.mopub.** { *; }
+  -dontwarn com.mopub.**
+
+  -keep class com.google.android.gms.** { *; }
+
+  -keep class com.openx.** { *; }
+  -dontwarn com.openx.**
+
+  -keep class com.chartboost.** { *; }
+  -dontwarn com.chartboost.**
+
+  -keep class com.verizon.ads** { *; }
+  -dontwarn com.verizon.ads.**
+  ```
+</details>
+
 ### R8
 
 If you are using R8 then add the following rules:
