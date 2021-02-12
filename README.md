@@ -1,4 +1,4 @@
-![alt text](images/pg-logo.png)
+![Pubguard logo](images/pg-logo.png)
 
 # Pubguard Android Library
 
@@ -17,6 +17,7 @@ Table of contents
 * [Getting Started](#getting-started)
 * [Integrating](#integrating)
 * [R8 / ProGuard](#r8--proguard)
+* [Unity Plugin](#unity-plugin)
 * [Change Log](#changelog)
 * [Library Size](#library-size)
 * [SDK support](#support)
@@ -47,7 +48,7 @@ pubguardKey = "xxxxxxxxxxxxxxxxxxx"
 
 The latest version of the Android Pubguard Library is **1.0.0**
 
-Pubguard supports Android Gradle Plugin 3.4.0 - 4.1.1 and Gradle Wrapper 5.6 - 6.8
+Pubguard supports Android Gradle Plugin **3.4.0 - 4.1.1** and Gradle Wrapper **5.6 - 6.8**
 
 ### Installing locally
 
@@ -232,14 +233,47 @@ If you are using ProGuard then add the following rules:
 
 Pubguard SDK uses Retrofit as a dependency, so make sure to include also Retrofit's ProGuard rules, they can be found [here](https://github.com/square/retrofit/blob/master/retrofit/src/main/resources/META-INF/proguard/retrofit2.pro).
 
-## Changelog
+# Unity Plugin
+
+Open your project in the Unity editor. Select **Assets > Import Package > Custom Package** and find the Pubguard.unitypackage file you downloaded
+
+![Unity Package Importing](images/unity-package-importing.png)
+
+Make sure all of the files are selected and click **Import**.
+
+![Unity Package Import](images/unity-package-import.png)
+
+Pubguard Unity Plugin uses External Dependency Manager for Unity to resolve dependen. If you have used External Dependency Manager before you can see an offer to delete outdated files, click **Apply**
+
+![Google Version Handler](images/google-version-handler.png)
+
+In the Unity editor, select **Assets > External Dependency Manager > Android Resolver > Resolve** (If you make any changes which affect Android dependencies, then run Resolver again)
+
+![Android Resolver](images/android-resolver.png)
+
+1. From **Project** tab expand **Assets > Prefabs**
+2. Drag and Drop **Pubguard** prefab to the Project Hierachy list
+3. The **PubguardController** shoud appear in the Hierachy list as shown on the image below
+
+![Pubguard Prefab](images/pubguard-prefab.png)
+
+Click on the **PubguardControler** and from the Inspector tab enter the Pubguards's Application Key.<br>
+Check the [Prerequisites](#Prerequisites) section explaining how to obtain the Application Key.
+
+![Pubguard Controller Inspector](images/pubguard-controller-inspector.png)
+
+The Pubguard plugin installation is now completed.
+
+---
+
+# Changelog
 
 
 For all release notes and previous versions please see our [changelog](changelog.md).
 
 ---
 
-## Library Size
+# Library Size
 
 The Pubguard team understands the importance of having a small footprint and our library is optimized to be as lightweight as possible on both iOS and Android.
 
@@ -260,7 +294,7 @@ Here is a guide based on our compiling with our test apps, please bear in mind t
 
 ---
 
-## Support
+# Support
 
 ### Advertising SDK support
 
@@ -285,7 +319,7 @@ These are SDKs designed specifically for serving advertising content into your a
 
 ---
 
-## Requirements
+# Requirements
 
 + Android 4.4 (API 19) and up
 + Android Gradle Plugin 3.4.0 and up
@@ -293,12 +327,12 @@ These are SDKs designed specifically for serving advertising content into your a
 
 ---
 
-## Versioning
+# Versioning
 
 Please use the most up to date version at all times to ensure maximum support.
 
 ---
 
-## License
+# License
 
 *© 2019 Minimised Media Limited (Pubguard© 2019 All Rights Reserved)*
