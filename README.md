@@ -1,4 +1,6 @@
-![Pubguard logo](images/pg-logo.png)
+<p align="center">
+  <img src="images/pg-logo.png"/>
+</p>
 
 # Pubguard Android Library
 
@@ -10,20 +12,20 @@ The data from the library is then accessible via your account on the Pubguard in
 
 ---
 
-Table of contents
-=================
+# Table of contents
 
 <!--ts-->
-* [Getting Started](#getting-started)
-* [Integrating](#integrating)
-* [R8 / ProGuard](#r8--proguard)
-* [Unity Plugin](#unity-plugin)
-* [Change Log](#changelog)
-* [Library Size](#library-size)
-* [SDK support](#support)
-* [Requirements](#requirements)
-* [Versioning](#versioning)
-* [License](#license)
+
+- [Getting Started](#getting-started)
+- [Integrating](#integrating)
+- [R8 / ProGuard](#r8--proguard)
+- [Unity Plugin](#unity-plugin)
+- [Change Log](#changelog)
+- [Library Size](#library-size)
+- [SDK support](#support)
+- [Requirements](#requirements)
+- [Versioning](#versioning)
+- [License](#license)
 <!--* [FAQs](https://github.com/bidstack-group/pubguardSDK/wiki/FAQs)-->
 
 <!--te-->
@@ -45,15 +47,14 @@ pubguardKey = "xxxxxxxxxxxxxxxxxxx"
 
 # Integrating
 
-
 The latest version of the Android Pubguard Library is **1.0.0**
 
 Pubguard supports Android Gradle Plugin **3.4.0 - 4.1.1** and Gradle Wrapper **5.6 - 6.8**
 
 ### Installing locally
 
-* Copy pubguard.aar and aspectj.jar into your main app module libs folder
-* Into project's `build.gradle`  add:
+- Copy pubguard.aar and aspectj.jar into your main app module libs folder
+- Into project's `build.gradle` add:
 
   ```groovy
   buildscript {
@@ -80,7 +81,7 @@ Pubguard supports Android Gradle Plugin **3.4.0 - 4.1.1** and Gradle Wrapper **5
   }
   ```
 
-* Into module's `build.gradle` add:
+- Into module's `build.gradle` add:
 
   ```groovy
   plugins {
@@ -121,15 +122,13 @@ Pubguard supports Android Gradle Plugin **3.4.0 - 4.1.1** and Gradle Wrapper **5
   }
   ```
 
-
 **Note** that it is required to add `implementation 'com.google.android.gms:play-services-basement:[GOOGLE_AD_VERSION]'`
 [GOOGLE_AD_VERSION] Version is based on your google ads version as per above. Even if you are not using Google ads, you still need to add support for Google services.
-
-
 
 #### Initialising the Library
 
 The Pubguard SDK should be initialized once at app launch. It is recommended to initialize the SDK in the Application subclass. Here's an example of how to call the init method in the Application subclass:
+
 ```java
 import com.bidstack.pubguard.Pubguard;
 …
@@ -149,64 +148,68 @@ public class MyApplication extends Application {
 ```
 
 **Note** All initialization parameters are mandatory and an exception will be thrown if null or empty string is passed.
-  - `application` is your apps `Application` class
-  - `YOUR_PUBGUARD_KEY` is a `String` of your publisher key that can be found in the Pubguard console
+
+- `application` is your apps `Application` class
+- `YOUR_PUBGUARD_KEY` is a `String` of your publisher key that can be found in the Pubguard console
 
 ---
 
 ## R8 / ProGuard
 
 Please keep all classes that are related to the ad network, that you use.
+
 <details>
   <summary>Click to expand example</summary>
 
-  ```
-  -keep class tv.teads.** { *; }
-  -dontwarn tv.teads.**
+```
+-keep class tv.teads.** { *; }
+-dontwarn tv.teads.**
 
-  -keep class com.google.android.exoplayer2.** { *; }
-  -dontwarn com.google.android.exoplayer2.**
+-keep class com.google.android.exoplayer2.** { *; }
+-dontwarn com.google.android.exoplayer2.**
 
-  -keep class com.adcolony.** { *; }
-  -dontwarn com.adcolony.**
+-keep class com.adcolony.** { *; }
+-dontwarn com.adcolony.**
 
-  -keep class com.iab.omid.library.adcolony.** { *; }
-  -dontwarn com.iab.omid.library.adcolony.**
+-keep class com.iab.omid.library.adcolony.** { *; }
+-dontwarn com.iab.omid.library.adcolony.**
 
-  -keep class com.aerserv.**
-  -dontwarn com.aerserv.**
+-keep class com.aerserv.**
+-dontwarn com.aerserv.**
 
-  -keep class com.smaato.** { *; }
-  -dontwarn com.smaato.**
+-keep class com.smaato.** { *; }
+-dontwarn com.smaato.**
 
-  -keep class com.inmobi.** { *; }
-  -dontwarn com.inmobi.**
+-keep class com.inmobi.** { *; }
+-dontwarn com.inmobi.**
 
-  -keep class com.rfm.** { *; }
+-keep class com.rfm.** { *; }
 
-  -keep class com.amazon.** { *; }
+-keep class com.amazon.** { *; }
 
-  -keep class com.millennialmedia.** { *; }
+-keep class com.millennialmedia.** { *; }
 
-  -keep class com.mopub.** { *; }
-  -dontwarn com.mopub.**
+-keep class com.mopub.** { *; }
+-dontwarn com.mopub.**
 
-  -keep class com.google.android.gms.** { *; }
+-keep class com.google.android.gms.** { *; }
 
-  -keep class com.openx.** { *; }
-  -dontwarn com.openx.**
+-keep class com.openx.** { *; }
+-dontwarn com.openx.**
 
-  -keep class com.chartboost.** { *; }
-  -dontwarn com.chartboost.**
+-keep class com.chartboost.** { *; }
+-dontwarn com.chartboost.**
 
-  -keep class com.verizon.ads** { *; }
-  -dontwarn com.verizon.ads.**
-  ```
+-keep class com.verizon.ads** { *; }
+-dontwarn com.verizon.ads.**
+```
+
 </details>
 
 ### R8
 
 If you are using R8 then add the following rules:
+
 ```
 -keep class com.bidstack** { *; }
 -dontwarn com.bidstack**
@@ -215,6 +218,7 @@ If you are using R8 then add the following rules:
 ### ProGuard
 
 If you are using ProGuard then add the following rules:
+
 ```
 -optimizations !code/simplification/arithmetic,!code/simplification/cast,!field/*,!class/merging/*
 -dontpreverify
@@ -243,7 +247,7 @@ Make sure all of the files are selected and click **Import**.
 
 ![Unity Package Import](images/unity-package-import.png)
 
-Pubguard Unity Plugin uses External Dependency Manager for Unity to resolve dependen. If you have used External Dependency Manager before you can see an offer to delete outdated files, click **Apply**
+Pubguard Unity Plugin uses External Dependency Manager for Unity to resolve dependencies. If you have used External Dependency Manager before you can see an offer to delete outdated files, click **Apply**
 
 ![Google Version Handler](images/google-version-handler.png)
 
@@ -268,7 +272,6 @@ The Pubguard plugin installation is now completed.
 
 # Changelog
 
-
 For all release notes and previous versions please see our [changelog](changelog.md).
 
 ---
@@ -279,18 +282,48 @@ The Pubguard team understands the importance of having a small footprint and our
 
 Here is a guide based on our compiling with our test apps, please bear in mind the size may increase or reduce based on the number of SDKs you use and the number of shared dependencies.
 
-| Dependencies | Size |
-| --- | --: |
-| Pubguard SDK | ~375KB |
-| Play Services Basement | ~324KB |
-| Core Kotlin Extensions | ~159KB |
-| Kotlin Stdlib Jdk7 | ~22KB |
-| Kotlin Coroutines Core | ~1,7MB |
-| Kotlin Coroutines Android | ~20KB |
-| Retrofit2 | ~129KB |
-| Retrofit2 Converter Protobuf | ~5KB |
-| Protobuf Java | ~1,4MB |
-| **Total** | ~4.1MB |
+<table>
+  <thead>
+    <tr>
+      <th colspan=2>Android Native</th><th>Unity Plugin</th>
+    </tr>
+    <tr>
+      <th>Dependencies</th><th>Size</th><th>Size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Pubguard SDK</td><td>~375KB</td><td rowspan=10>~981KB</td>
+    </tr>
+    <tr>
+      <td>Play Services Basement</td><td>~324KB</td>
+    </tr>
+    <tr>
+      <td>Core Kotlin Extensions</td><td>~159KB</td>
+    </tr>
+    <tr>
+      <td>Kotlin Stdlib Jdk7</td><td>~22KB</td>
+    </tr>
+    <tr>
+      <td>Kotlin Coroutines Core</td><td>~1,7MB</td>
+    </tr>
+    <tr>
+      <td>Kotlin Coroutines Android</td><td>~20KB</td>
+    </tr>
+    <tr>
+      <td>Retrofit2</td><td>~129KB</td>
+    </tr>
+    <tr>
+      <td>Retrofit2 Converter Protobuf</td><td>~5KB</td>
+    </tr>
+    <tr>
+      <td>Protobuf Java</td><td>~1,4MB</td>
+    </tr>
+    <tr>
+      <td><b>Total</b></td><td>~4.1MB</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -300,30 +333,30 @@ Here is a guide based on our compiling with our test apps, please bear in mind t
 
 These are SDKs designed specifically for serving advertising content into your app, if you would like information on a version or vendor that is not on this list please email support@pubguard.com
 
-| Company/Product | Android SDK identifier | Android versions |
-| --- | --- | --- |
-| AdColony | com.adcolony:sdk |  4.1.0 - 4.3.0  |
-| AdMob | com.google.android.gms:play-services-ads | 19.0.0 - 19.5.0 |
-| Amazon Mobile Ads | com.amazon.android:mobile-ads | 6.0.0 |
-| AppLovin | com.applovin:applovin-sdk | 9.14.4 - 9.14.5 |
-| Chartboost | com.chartboost:chartboost-sdk | 7.5.0;<br/> 8.1.0 - 8.2.0 |
-| Facebook Audience Network | com.facebook.android:audience-network-sdk | 5.8.0 - 6.1.0 |
-| Fyber Marketplace | com.fyber.vamp:core-sdk/:video-kit/:mraid-kit | 7.7.2 |
-| InMobi | com.inmobi.monetization:inmobi-ads | 9.0.1;<br/> 9.1.0 |
-| ironSource | com.ironsource.sdk:mediationsdk | 6.14.0.1;<br/> 6.16.1;<br/> 6.18.0 - 7.0.3 |
-| MoPub | com.mopub:mopub-sdk | 5.14.0 |
-| Smaato | com.smaato.android.sdk:smaato-sdk | 21.5.3 - 21.5.4 |
-| Unity Ads | com.unity3d.ads:unity-ads | 3.4.2 - 3.5.0 |
-| Verizon | com.verizon.ads:android-vas-standard-edition | 1.2.0; 1.8.0 - 1.8.2 |
-| Vungle | com.vungle:publisher-sdk-android | 6.7.0 - 6.8.1 |
+| Company/Product           | Android SDK identifier                        | Android versions                           |
+| ------------------------- | --------------------------------------------- | ------------------------------------------ |
+| AdColony                  | com.adcolony:sdk                              | 4.1.0 - 4.3.0                              |
+| AdMob                     | com.google.android.gms:play-services-ads      | 19.0.0 - 19.5.0                            |
+| Amazon Mobile Ads         | com.amazon.android:mobile-ads                 | 6.0.0                                      |
+| AppLovin                  | com.applovin:applovin-sdk                     | 9.14.4 - 9.14.5                            |
+| Chartboost                | com.chartboost:chartboost-sdk                 | 7.5.0;<br/> 8.1.0 - 8.2.0                  |
+| Facebook Audience Network | com.facebook.android:audience-network-sdk     | 5.8.0 - 6.1.0                              |
+| Fyber Marketplace         | com.fyber.vamp:core-sdk/:video-kit/:mraid-kit | 7.7.2                                      |
+| InMobi                    | com.inmobi.monetization:inmobi-ads            | 9.0.1;<br/> 9.1.0                          |
+| ironSource                | com.ironsource.sdk:mediationsdk               | 6.14.0.1;<br/> 6.16.1;<br/> 6.18.0 - 7.0.3 |
+| MoPub                     | com.mopub:mopub-sdk                           | 5.14.0                                     |
+| Smaato                    | com.smaato.android.sdk:smaato-sdk             | 21.5.3 - 21.5.4                            |
+| Unity Ads                 | com.unity3d.ads:unity-ads                     | 3.4.2 - 3.5.0                              |
+| Verizon                   | com.verizon.ads:android-vas-standard-edition  | 1.2.0; 1.8.0 - 1.8.2                       |
+| Vungle                    | com.vungle:publisher-sdk-android              | 6.7.0 - 6.8.1                              |
 
 ---
 
 # Requirements
 
-+ Android 4.4 (API 19) and up
-+ Android Gradle Plugin 3.4.0 and up
-+ Gradle Wrapper 5.6 and up
+- Android 4.4 (API 19) and up
+- Android Gradle Plugin 3.4.0 and up
+- Gradle Wrapper 5.6 and up
 
 ---
 
@@ -335,4 +368,4 @@ Please use the most up to date version at all times to ensure maximum support.
 
 # License
 
-*© 2019 Minimised Media Limited (Pubguard© 2019 All Rights Reserved)*
+_© 2019 Minimised Media Limited (Pubguard© 2019 All Rights Reserved)_
