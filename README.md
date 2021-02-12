@@ -285,7 +285,7 @@ Here is a guide based on our compiling with our test apps, please bear in mind t
 <table>
   <thead>
     <tr>
-      <th colspan=2>Android Native</th><th>Unity Plugin</th>
+      <th colspan=2>Android Native SDK</th><th>Unity Plugin</th>
     </tr>
     <tr>
       <th>Dependencies</th><th>Size</th><th>Size</th>
@@ -293,34 +293,34 @@ Here is a guide based on our compiling with our test apps, please bear in mind t
   </thead>
   <tbody>
     <tr>
-      <td>Pubguard SDK</td><td>~375KB</td><td rowspan=10>~981KB</td>
+      <td>Pubguard SDK</td><td align="right">~375KB</td><td rowspan=10 align="right">~981KB</td>
     </tr>
     <tr>
-      <td>Play Services Basement</td><td>~324KB</td>
+      <td>Play Services Basement</td><td align="right">~324KB</td>
     </tr>
     <tr>
-      <td>Core Kotlin Extensions</td><td>~159KB</td>
+      <td>Core Kotlin Extensions</td><td align="right">~159KB</td>
     </tr>
     <tr>
-      <td>Kotlin Stdlib Jdk7</td><td>~22KB</td>
+      <td>Kotlin Stdlib Jdk7</td><td align="right">~22KB</td>
     </tr>
     <tr>
-      <td>Kotlin Coroutines Core</td><td>~1,7MB</td>
+      <td>Kotlin Coroutines Core</td><td align="right">~1,7MB</td>
     </tr>
     <tr>
-      <td>Kotlin Coroutines Android</td><td>~20KB</td>
+      <td>Kotlin Coroutines Android</td><td align="right">~20KB</td>
     </tr>
     <tr>
-      <td>Retrofit2</td><td>~129KB</td>
+      <td>Retrofit2</td><td align="right">~129KB</td>
     </tr>
     <tr>
-      <td>Retrofit2 Converter Protobuf</td><td>~5KB</td>
+      <td>Retrofit2 Converter Protobuf</td><td align="right">~5KB</td>
     </tr>
     <tr>
-      <td>Protobuf Java</td><td>~1,4MB</td>
+      <td>Protobuf Java</td><td align="right">~1,4MB</td>
     </tr>
     <tr>
-      <td><b>Total</b></td><td>~4.1MB</td>
+      <td><b>Total</b></td><td align="right">~4.1MB</td>
     </tr>
   </tbody>
 </table>
