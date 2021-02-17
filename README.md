@@ -268,6 +268,10 @@ Check the [Prerequisites](#Prerequisites) section explaining how to obtain the A
 
 The Pubguard plugin installation is now completed.
 
+#### Note
+
+If after the app start Pubguard does not work and you do not see `I/PUBGUARD: Pubguard initialized successfully` in logcat try deleting the `Temp` folder from your project's root and building again, this will act as a clean build.
+
 ---
 
 # Changelog
