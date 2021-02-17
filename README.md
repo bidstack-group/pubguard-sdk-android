@@ -270,7 +270,7 @@ The Pubguard plugin installation is now completed.
 
 #### Note
 
-If after the app start Pubguard does not work and you do not see `I/PUBGUARD: Pubguard initialized successfully` in logcat try deleting the `Temp` folder from your project's root and building again, this will act as a clean build.
+If you don't see `I/PUBGUARD: Pubguard initialized successfully` in logcat after app launch, try deleting the `Temp` folder from your project's root and building again, this will act as a clean build.
 
 ---
 
