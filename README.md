@@ -156,12 +156,24 @@ public class MyApplication extends Application {
 
 ## R8 / ProGuard
 
+If you use Pubguard as a dependency in an Android project which uses R8 as a default compiler you don’t have to do anything and you can skip this section. All rules are already bundled into AAR which can be interpreted by R8 automatically. 
+However, if you don't use R8, you will need to follow the next steps:
+
 Please keep all classes that are related to the ad network, that you use.
 
 <details>
   <summary>Click to expand example</summary>
 
 ```
+-keep class com.facebook.ads.** { *; }
+-dontwarn com.facebook.ads.**
+
+-keep class com.vungle.** {*; }
+-dontwarn com.vungle.**
+
+-keep class com.unity3d.ads.** { *; }
+-dontwarn com.unity3d.ads.**
+
 -keep class tv.teads.** { *; }
 -dontwarn tv.teads.**
 
@@ -184,15 +196,22 @@ Please keep all classes that are related to the ad network, that you use.
 -dontwarn com.inmobi.**
 
 -keep class com.rfm.** { *; }
+-dontwarn com.rfm.**
 
 -keep class com.amazon.** { *; }
+-dontwarn com.amazon.**
 
 -keep class com.millennialmedia.** { *; }
+-dontwarn com.millennialmedia.**
+
+-keep class com.ironsource.** { *; }
+-dontwarn com.ironsource.**
 
 -keep class com.mopub.** { *; }
 -dontwarn com.mopub.**
 
 -keep class com.google.android.gms.** { *; }
+-dontwarn com.google.android.gms.**
 
 -keep class com.openx.** { *; }
 -dontwarn com.openx.**
@@ -202,6 +221,9 @@ Please keep all classes that are related to the ad network, that you use.
 
 -keep class com.verizon.ads** { *; }
 -dontwarn com.verizon.ads.**
+
+-keep class com.smaato.sdk.** { *;}
+-dontwarn com.smaato.sdk.**
 ```
 
 </details>
@@ -251,7 +273,7 @@ Pubguard Unity Plugin uses External Dependency Manager for Unity to resolve depe
 
 ![Google Version Handler](images/google-version-handler.png)
 
-In the Unity editor, select **Assets > External Dependency Manager > Android Resolver > Resolve** (If you make any changes which affect Android dependencies, then run Resolver again)
+In the Unity editor, select **Assets > External Dependency Manager > Android Resolver > Force Resolve** (If you make any changes which affect Android dependencies, then run Resolver again)
 
 ![Android Resolver](images/android-resolver.png)
 
