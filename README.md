@@ -370,6 +370,7 @@ These are SDKs designed specifically for serving advertising content into your a
 | Fyber Marketplace         | com.fyber.vamp:core-sdk/:video-kit/:mraid-kit | 7.7.2                                      |
 | InMobi                    | com.inmobi.monetization:inmobi-ads            | 9.0.1;<br/> 9.1.0                          |
 | ironSource                | com.ironsource.sdk:mediationsdk               | 6.14.0.1;<br/> 6.16.1;<br/> 6.18.0 - 7.0.3 |
+| Mintegral                 | com.mintegral.msdk:common                     | 13.1.11                                    |
 | MoPub                     | com.mopub:mopub-sdk                           | 5.14.0                                     |
 | Smaato                    | com.smaato.android.sdk:smaato-sdk             | 21.5.3 - 21.5.4                            |
 | Unity Ads                 | com.unity3d.ads:unity-ads                     | 3.4.2 - 3.5.0                              |
