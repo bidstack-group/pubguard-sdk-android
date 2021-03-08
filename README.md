@@ -165,9 +165,6 @@ Please keep all classes that are related to the ad network, that you use.
   <summary>Click to expand example</summary>
 
 ```
--keep class com.facebook.ads.** { *; }
--dontwarn com.facebook.ads.**
-
 -keep class com.vungle.** {*; }
 -dontwarn com.vungle.**
 
@@ -366,7 +363,6 @@ These are SDKs designed specifically for serving advertising content into your a
 | Amazon Mobile Ads         | com.amazon.android:mobile-ads                 | 6.0.0                                      |
 | AppLovin                  | com.applovin:applovin-sdk                     | 9.14.4 - 9.14.5                            |
 | Chartboost                | com.chartboost:chartboost-sdk                 | 7.5.0;<br/> 8.1.0 - 8.2.0                  |
-| Facebook Audience Network | com.facebook.android:audience-network-sdk     | 5.8.0 - 6.1.0                              |
 | Fyber Marketplace         | com.fyber.vamp:core-sdk/:video-kit/:mraid-kit | 7.7.2                                      |
 | InMobi                    | com.inmobi.monetization:inmobi-ads            | 9.0.1;<br/> 9.1.0                          |
 | ironSource                | com.ironsource.sdk:mediationsdk               | 6.14.0.1;<br/> 6.16.1;<br/> 6.18.0 - 7.0.3 |
