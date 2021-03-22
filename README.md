@@ -359,7 +359,7 @@ These are SDKs designed specifically for serving advertising content into your a
 | Company/Product           | Android SDK identifier                        | Android versions                           |
 | ------------------------- | --------------------------------------------- | ------------------------------------------ |
 | AdColony                  | com.adcolony:sdk                              | 4.1.0 - 4.3.0                              |
-| AdMob                     | com.google.android.gms:play-services-ads      | 19.0.0 - 19.5.0                            |
+| AdMob                     | com.google.android.gms:play-services-ads      | 19.0.0 - 19.5.0, 19.7.0                    |
 | Amazon Mobile Ads         | com.amazon.android:mobile-ads                 | 6.0.0                                      |
 | AppLovin                  | com.applovin:applovin-sdk                     | 9.14.4 - 9.14.5                            |
 | Chartboost                | com.chartboost:chartboost-sdk                 | 7.5.0;<br/> 8.1.0 - 8.2.0                  |
