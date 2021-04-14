@@ -119,6 +119,9 @@ Pubguard supports Android Gradle Plugin **3.4.0 - 4.1.1** and Gradle Wrapper **5
     implementation 'com.squareup.retrofit2:converter-protobuf:2.6.3'
     implementation 'com.google.protobuf:protobuf-java:3.6.1'
 
+    // other 
+    implementation 'org.apache.commons:commons-text:1.9'
+
   }
   ```
 
