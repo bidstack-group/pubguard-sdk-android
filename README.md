@@ -58,10 +58,6 @@ pubguardKey = "xxxxxxxxxxxxxxxxxxx"
 
 # Integrating
 
-The latest version of the Android Pubguard Library is **1.0.0**
-
-Pubguard supports Android Gradle Plugin **3.4.0 - 4.1.1** and Gradle Wrapper **5.6 - 6.8**
-
 ### Installing locally
 
 - Copy pubguard.aar and aspectj.jar into your main app module libs folder
