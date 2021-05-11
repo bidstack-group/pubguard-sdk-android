@@ -17,13 +17,13 @@ The data from the library is then accessible via your account on the Pubguard in
 <!--ts-->
 
 - [Getting Started](#getting-started)
+- [Requirements](#requirements)
 - [Integrating](#integrating)
 - [R8 / ProGuard](#r8--proguard)
 - [Unity Plugin](#unity-plugin)
 - [Change Log](#changelog)
 - [Library Size](#library-size)
 - [SDK support](#support)
-- [Requirements](#requirements)
 - [Versioning](#versioning)
 - [License](#license)
 <!--* [FAQs](https://github.com/bidstack-group/pubguardSDK/wiki/FAQs)-->
@@ -42,6 +42,17 @@ Before installing the Pubguard library you will need an application key that is 
 ```
 pubguardKey = "xxxxxxxxxxxxxxxxxxx"
 ```
+
+---
+
+# Requirements
+
+- Android Studio 3.4 and up
+- Android platform 4.4 KitKat (API 19) and up
+- Android Gradle Plugin 3.4.0 and up
+- Gradle Wrapper 5.6 and up
+
+**Note** Android Studio 4.2 and up uses JDK 11 by default. If you need to use Android Gradle Plugin with a version lower than **3.6.0** or if you need to use Gradle with a version lower than **6.0**, make sure to use JDK 8 for the project build. To do that you can use CLI to build a project, change the JDK path in Android Studio "Project Structure" settings or you can downgrade Android Studio to the version lower than 4.2). All other Android Gradle Plugin and Gradle versions work with JDK 11.
 
 ---
 
@@ -375,14 +386,6 @@ These are SDKs designed specifically for serving advertising content into your a
 | Unity Ads                 | com.unity3d.ads:unity-ads                     | 3.4.2 - 3.5.0; 3.6.0                       |
 | Verizon                   | com.verizon.ads:android-vas-standard-edition  | 1.2.0; 1.8.0 - 1.8.2                       |
 | Vungle                    | com.vungle:publisher-sdk-android              | 6.7.1 - 6.8.1                              |
-
----
-
-# Requirements
-
-- Android 4.4 (API 19) and up
-- Android Gradle Plugin 3.4.0 and up
-- Gradle Wrapper 5.6 and up
 
 ---
 
