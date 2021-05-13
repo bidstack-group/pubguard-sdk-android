@@ -359,22 +359,22 @@ Here is a guide based on our compiling with our test apps, please bear in mind t
 
 These are SDKs designed specifically for serving advertising content into your app, if you would like information on a version or vendor that is not on this list please email support@pubguard.com
 
-| Company/Product           | Android SDK identifier                        | Android versions                           |
-| ------------------------- | --------------------------------------------- | ------------------------------------------ |
-| AdColony                  | com.adcolony:sdk                              | 4.1.0 - 4.3.0                              |
-| AdMob                     | com.google.android.gms:play-services-ads      | 19.0.0 - 19.8.0                            |
-| Amazon Mobile Ads         | com.amazon.android:mobile-ads                 | 6.0.0                                      |
-| AppLovin                  | com.applovin:applovin-sdk                     | 9.14.4 - 9.14.5                            |
-| Chartboost                | com.chartboost:chartboost-sdk                 | 7.5.0;<br/> 8.1.0 - 8.2.0                  |
-| Fyber FairBir             | com.fyber:fairbid-sdk                         | 3.6.0 - 3.7.0                              |
-| Fyber Marketplace         | com.fyber.vamp:core-sdk/:video-kit/:mraid-kit | 7.7.2                                      |
-| InMobi                    | com.inmobi.monetization:inmobi-ads            | 9.0.1;<br/> 9.1.0                          |
-| ironSource                | com.ironsource.sdk:mediationsdk               | 6.14.0.1;<br/> 6.16.1;<br/> 6.18.0 - 7.0.3 |
-| MoPub                     | com.mopub:mopub-sdk                           | 5.14.0                                     |
-| Smaato                    | com.smaato.android.sdk:smaato-sdk             | 21.5.3 - 21.5.4                            |
-| Unity Ads                 | com.unity3d.ads:unity-ads                     | 3.4.2 - 3.5.0; 3.6.0                       |
-| Verizon                   | com.verizon.ads:android-vas-standard-edition  | 1.2.0; 1.8.0 - 1.8.2                       |
-| Vungle                    | com.vungle:publisher-sdk-android              | 6.7.1 - 6.8.1                              |
+| Company/Product           | Android SDK identifier                        | Android versions                                              |
+| ------------------------- | --------------------------------------------- | ------------------------------------------------------------- |
+| AdColony                  | com.adcolony:sdk                              | 4.1.0 - 4.3.0                                                 |
+| AdMob                     | com.google.android.gms:play-services-ads      | 19.0.0 - 19.8.0                                               |
+| Amazon Mobile Ads         | com.amazon.android:mobile-ads                 | 6.0.0                                                         |
+| AppLovin                  | com.applovin:applovin-sdk                     | 9.14.4 - 9.14.5                                               |
+| Chartboost                | com.chartboost:chartboost-sdk                 | 7.5.0;<br/> 8.1.0 - 8.2.0                                     |
+| Fyber FairBir             | com.fyber:fairbid-sdk                         | 3.6.0 - 3.7.0                                                 |
+| Fyber Marketplace         | com.fyber.vamp:core-sdk/:video-kit/:mraid-kit | 7.7.2                                                         |
+| InMobi                    | com.inmobi.monetization:inmobi-ads            | 9.0.1;<br/> 9.1.0                                             |
+| ironSource                | com.ironsource.sdk:mediationsdk               | 6.14.0.1;<br/>6.16.1;<br/> 6.18.0 - 7.0.3;<br/>7.1.1 - 7.1.3; |
+| MoPub                     | com.mopub:mopub-sdk                           | 5.14.0                                                        |
+| Smaato                    | com.smaato.android.sdk:smaato-sdk             | 21.5.3 - 21.5.4                                               |
+| Unity Ads                 | com.unity3d.ads:unity-ads                     | 3.4.2 - 3.5.0; 3.6.0                                          |
+| Verizon                   | com.verizon.ads:android-vas-standard-edition  | 1.2.0; 1.8.0 - 1.8.2                                          |
+| Vungle                    | com.vungle:publisher-sdk-android              | 6.7.1 - 6.8.1                                                 |
 
 ---
 
