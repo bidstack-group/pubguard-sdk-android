@@ -304,7 +304,8 @@ The Pubguard plugin installation is now completed.
 
 #### Note
 
-If you don't see `I/PUBGUARD: Pubguard initialized successfully` in logcat after app launch, try deleting the `Temp` folder from your project's root and building again, this will act as a clean build.
+- Pubguard will be unable to initialize if the exported project is built outside of Unity (for example in Android Studio) because Pubguard uses c# script for initialization.
+- If you don't see `I/PUBGUARD: Pubguard initialized successfully` in logcat after app launch, try restarting Unity (this action will clear the `Temp` folder from your project's root).
 
 ---
 
