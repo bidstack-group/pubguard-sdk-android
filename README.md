@@ -47,10 +47,11 @@ pubguardKey = "xxxxxxxxxxxxxxxxxxx"
 
 # Requirements
 
-- Android Studio 3.4 and up
+- Android Studio 3.3 and up
 - Android platform 4.4 KitKat (API 19) and up
-- Android Gradle Plugin 3.4.0 and up
-- Gradle Wrapper 5.6 and up
+- Android Gradle Plugin 3.3.0 and up
+- Gradle Wrapper 5.0 and up
+- (only for Unity3D) Unity3D starting from 2019.2
 
 **Note** Android Studio 4.2 and up uses JDK 11 by default. If you need to use Android Gradle Plugin with a version lower than **3.6.0** or if you need to use Gradle with a version lower than **6.0**, make sure to use JDK 8 for the project build. To do that you can use CLI to build a project, change the JDK path in Android Studio "Project Structure" settings or you can downgrade Android Studio to the version lower than 4.2). All other Android Gradle Plugin and Gradle versions work with JDK 11.
 
@@ -284,6 +285,10 @@ In the Unity editor, select **Assets > External Dependency Manager > Android Res
 
 ![Android Resolver](images/android-resolver.png)
 
+**(optionally)** It is possible to make Android Resolver work faster if **Custom Main Gradle Template** and **Custom Gradle Properties Template** are enabled
+
+![Custom Gradle Templates](images/gradle-project-settings.png)
+
 1. From **Project** tab expand **Assets > Prefabs**
 2. Drag and Drop **Pubguard** prefab to the Project Hierachy list
 3. The **PubguardController** shoud appear in the Hierachy list as shown on the image below
@@ -299,7 +304,8 @@ The Pubguard plugin installation is now completed.
 
 #### Note
 
-If you don't see `I/PUBGUARD: Pubguard initialized successfully` in logcat after app launch, try deleting the `Temp` folder from your project's root and building again, this will act as a clean build.
+- Pubguard will be unable to initialize if the exported project is built outside of Unity (for example in Android Studio) because Pubguard uses c# script for initialization.
+- If you don't see `I/PUBGUARD: Pubguard initialized successfully` in logcat after app launch, try restarting Unity (this action will clear the `Temp` folder from your project's root).
 
 ---
 
@@ -326,7 +332,7 @@ Here is a guide based on our compiling with our test apps, please bear in mind t
   </thead>
   <tbody>
     <tr>
-      <td>Pubguard SDK</td><td align="right">~375KB</td><td rowspan=10 align="right">~981KB</td>
+      <td>Pubguard SDK</td><td align="right">~400KB</td><td rowspan=10 align="right">~14.2MB</td>
     </tr>
     <tr>
       <td>Play Services Basement</td><td align="right">~324KB</td>
@@ -351,6 +357,9 @@ Here is a guide based on our compiling with our test apps, please bear in mind t
     </tr>
     <tr>
       <td>Protobuf Java</td><td align="right">~1,4MB</td>
+    </tr>
+    <tr>
+      <td>Apache Commons Text</td><td align="right">~211KB</td>
     </tr>
     <tr>
       <td><b>Total</b></td><td align="right">~4.1MB</td>
