@@ -71,11 +71,11 @@ pubguardKey = "xxxxxxxxxxxxxxxxxxx"
           jcenter()
       }
       dependencies {
-          classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.21"
+          classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.0"
           classpath files('app/libs/aspectj.jar')
-          classpath "org.aspectj:aspectjtools:1.9.4"
-          classpath "org.aspectj:aspectjrt:1.9.4"
-          classpath "org.javassist:javassist:3.27.0-GA"
+          classpath "org.aspectj:aspectjtools:1.9.6"
+          classpath "org.aspectj:aspectjrt:1.9.6"
+          classpath "org.javassist:javassist:3.28.0-GA"
       }
   }
   allprojects {
@@ -112,19 +112,19 @@ pubguardKey = "xxxxxxxxxxxxxxxxxxx"
     // android
     implementation "androidx.core:core:1.3.1"
     implementation 'com.google.android.gms:play-services-basement:[GOOGLE_AD_VERSION]'
-    implementation 'androidx.webkit:webkit:1.2.0'
+    implementation 'androidx.webkit:webkit:1.4.0'
 
     // kotlin
-    implementation "androidx.core:core-ktx:1.3.1"
+    implementation "androidx.core:core-ktx:1.3.2"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3'
 
     // networking
-    implementation 'com.squareup.retrofit2:retrofit:2.6.3'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.4'
 
     // networking  converters
-    implementation 'com.squareup.retrofit2:converter-protobuf:2.6.3'
+    implementation 'com.squareup.retrofit2:converter-protobuf:2.6.4'
     implementation 'com.google.protobuf:protobuf-java:3.6.1'
 
     // other 
