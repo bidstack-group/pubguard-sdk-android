@@ -70,7 +70,6 @@ pubguardKey = "xxxxxxxxxxxxxxxxxxx"
           jcenter()
       }
       dependencies {
-          classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.21"
           classpath files('app/libs/aspectj.jar')
           classpath "org.aspectj:aspectjtools:1.9.4"
           classpath "org.aspectj:aspectjrt:1.9.4"
