@@ -47,10 +47,11 @@ pubguardKey = "xxxxxxxxxxxxxxxxxxx"
 
 # Requirements
 
-- Android Studio 3.4 and up
+- Android Studio 3.3 and up
 - Android platform 4.4 KitKat (API 19) and up
-- Android Gradle Plugin 3.4.0 and up
-- Gradle Wrapper 5.6 and up
+- Android Gradle Plugin 3.3.0 and up
+- Gradle Wrapper 5.0 and up
+- (only for Unity3D) Unity3D starting from 2019.2
 
 **Note** Android Studio 4.2 and up uses JDK 11 by default. If you need to use Android Gradle Plugin with a version lower than **3.6.0** or if you need to use Gradle with a version lower than **6.0**, make sure to use JDK 8 for the project build. To do that you can use CLI to build a project, change the JDK path in Android Studio "Project Structure" settings or you can downgrade Android Studio to the version lower than 4.2). All other Android Gradle Plugin and Gradle versions work with JDK 11.
 
@@ -71,9 +72,9 @@ pubguardKey = "xxxxxxxxxxxxxxxxxxx"
       }
       dependencies {
           classpath files('app/libs/aspectj.jar')
-          classpath "org.aspectj:aspectjtools:1.9.4"
-          classpath "org.aspectj:aspectjrt:1.9.4"
-          classpath "org.javassist:javassist:3.27.0-GA"
+          classpath "org.aspectj:aspectjtools:1.9.6"
+          classpath "org.aspectj:aspectjrt:1.9.6"
+          classpath "org.javassist:javassist:3.28.0-GA"
       }
   }
   allprojects {
@@ -110,19 +111,19 @@ pubguardKey = "xxxxxxxxxxxxxxxxxxx"
     // android
     implementation "androidx.core:core:1.3.1"
     implementation 'com.google.android.gms:play-services-basement:[GOOGLE_AD_VERSION]'
-    implementation 'androidx.webkit:webkit:1.2.0'
+    implementation 'androidx.webkit:webkit:1.4.0'
 
     // kotlin
-    implementation "androidx.core:core-ktx:1.3.1"
+    implementation "androidx.core:core-ktx:1.3.2"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3'
 
     // networking
-    implementation 'com.squareup.retrofit2:retrofit:2.6.3'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.4'
 
     // networking  converters
-    implementation 'com.squareup.retrofit2:converter-protobuf:2.6.3'
+    implementation 'com.squareup.retrofit2:converter-protobuf:2.6.4'
     implementation 'com.google.protobuf:protobuf-java:3.6.1'
 
     // other 
@@ -298,7 +299,8 @@ The Pubguard plugin installation is now completed.
 
 #### Note
 
-If you don't see `I/PUBGUARD: Pubguard initialized successfully` in logcat after app launch, try deleting the `Temp` folder from your project's root and building again, this will act as a clean build.
+- Pubguard will be unable to initialize if the exported project is built outside of Unity (for example in Android Studio) because Pubguard uses c# script for initialization.
+- If you don't see `I/PUBGUARD: Pubguard initialized successfully` in logcat after app launch, try restarting Unity (this action will clear the `Temp` folder from your project's root).
 
 ---
 
@@ -325,7 +327,7 @@ Here is a guide based on our compiling with our test apps, please bear in mind t
   </thead>
   <tbody>
     <tr>
-      <td>Pubguard SDK</td><td align="right">~375KB</td><td rowspan=10 align="right">~981KB</td>
+      <td>Pubguard SDK</td><td align="right">~400KB</td><td rowspan=10 align="right">~14.2MB</td>
     </tr>
     <tr>
       <td>Play Services Basement</td><td align="right">~324KB</td>
@@ -352,6 +354,9 @@ Here is a guide based on our compiling with our test apps, please bear in mind t
       <td>Protobuf Java</td><td align="right">~1,4MB</td>
     </tr>
     <tr>
+      <td>Apache Commons Text</td><td align="right">~211KB</td>
+    </tr>
+    <tr>
       <td><b>Total</b></td><td align="right">~4.1MB</td>
     </tr>
   </tbody>
@@ -369,13 +374,12 @@ These are SDKs designed specifically for serving advertising content into your a
 | ------------------------- | --------------------------------------------- | ------------------------------------------------------------- |
 | AdColony                  | com.adcolony:sdk                              | 4.1.0 - 4.3.0                                                 |
 | AdMob                     | com.google.android.gms:play-services-ads      | 19.0.0 - 19.8.0                                               |
-| Amazon Mobile Ads         | com.amazon.android:mobile-ads                 | 6.0.0                                                         |
 | AppLovin                  | com.applovin:applovin-sdk                     | 9.14.4 - 9.14.5                                               |
 | Chartboost                | com.chartboost:chartboost-sdk                 | 7.5.0;<br/> 8.1.0 - 8.2.0                                     |
 | Fyber FairBir             | com.fyber:fairbid-sdk                         | 3.6.0 - 3.7.0                                                 |
 | Fyber Marketplace         | com.fyber.vamp:core-sdk/:video-kit/:mraid-kit | 7.7.2                                                         |
 | InMobi                    | com.inmobi.monetization:inmobi-ads            | 9.0.1;<br/> 9.1.0                                             |
-| ironSource                | com.ironsource.sdk:mediationsdk               | 6.14.0.1;<br/>6.16.1;<br/> 6.18.0 - 7.0.3;<br/>7.1.1 - 7.1.3; |
+| ironSource                | com.ironsource.sdk:mediationsdk               | 6.14.0.1;<br/>6.16.1;<br/> 6.18.0 - 7.0.3;<br/>7.1.1 - 7.1.5.1;<br> |
 | MoPub                     | com.mopub:mopub-sdk                           | 5.14.0                                                        |
 | Smaato                    | com.smaato.android.sdk:smaato-sdk             | 21.5.3 - 21.5.4                                               |
 | Unity Ads                 | com.unity3d.ads:unity-ads                     | 3.4.2 - 3.5.0; 3.6.0                                          |
