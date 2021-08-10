@@ -71,7 +71,6 @@ pubguardKey = "xxxxxxxxxxxxxxxxxxx"
           jcenter()
       }
       dependencies {
-          classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.0"
           classpath files('app/libs/aspectj.jar')
           classpath "org.aspectj:aspectjtools:1.9.6"
           classpath "org.aspectj:aspectjrt:1.9.6"
@@ -284,10 +283,6 @@ Pubguard Unity Plugin uses External Dependency Manager for Unity to resolve depe
 In the Unity editor, select **Assets > External Dependency Manager > Android Resolver > Force Resolve** (If you make any changes which affect Android dependencies, then run Resolver again)
 
 ![Android Resolver](images/android-resolver.png)
-
-**(optionally)** It is possible to make Android Resolver work faster if **Custom Main Gradle Template** and **Custom Gradle Properties Template** are enabled
-
-![Custom Gradle Templates](images/gradle-project-settings.png)
 
 1. From **Project** tab expand **Assets > Prefabs**
 2. Drag and Drop **Pubguard** prefab to the Project Hierachy list
