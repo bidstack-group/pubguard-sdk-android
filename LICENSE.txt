@@ -1,0 +1,7 @@
+The PubguardSDK License can be found at https://pubguard.com/sdk-license-agreement
+
+Please note that gradle, core-ktx, webkit, retrofit, convrter-protobuf, commons-text, kotlin-android-extensions-runtime, kotlin-stdlib-jdk8, kotlin-coroutines-core, kotlin-coroutines-android are licensed under The Apache 2.0 license (http://www.apache.org/licenses/LICENSE-2.0.txt)
+Please note that protobuf-java is licensed under The BSD 3-clause license (https://opensource.org/licenses/BSD-3-Clause)
+Please note that aspectjtools, aspectjrt are licensed under The EPL 2.0 license (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt)
+Please note that javassist is licensed under MPL 1.1, LGPL 2.1 and Apache 2.0 licenses (http://www.mozilla.org/MPL/MPL-1.1.html, http://www.gnu.org/licenses/lgpl-2.1.html, http://www.apache.org/licenses/LICENSE-2.0.txt)
+Please note that jsoup is licensed under MIT license (https://jsoup.org/license)
