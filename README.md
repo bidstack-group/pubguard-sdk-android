@@ -71,7 +71,7 @@ Before installing the Pubguard library you will need an application key that is 
 
     ```groovy
     plugins {
-        id 'com.android.application'
+        ...
         id 'com.pubguard.pubguard-gradle-plugin'
     }
     
@@ -174,7 +174,7 @@ public class MyApplication extends Application {
 **Note** All initialization parameters are mandatory and an exception will be thrown if null or empty string is passed.
 
 - `application` is your apps `Application` class
-- `YOUR_API_KEY` is a `String` of your publisher key that can be found in the Pubguard dashboard
+- `YOUR_API_KEY` is a `String` of your **Android API Key** that can be found in the Pubguard dashboard
 
 ---
 
