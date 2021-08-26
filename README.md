@@ -180,7 +180,7 @@ public class MyApplication extends Application {
 
 # Changelog
 
-For all release notes and previous versions please see our [changelog](changelog.md).
+For all release notes and previous versions please see our [changelog](ChangeLog.md).
 
 ---
 
