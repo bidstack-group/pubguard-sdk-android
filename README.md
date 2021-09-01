@@ -32,7 +32,7 @@ The following instructions will enable you to get the Pubguard library running o
 
 ## Prerequisites
 
-Before installing the Pubguard library you will need an API key which is available through your Pubguard account. To retrieve an API key, please access http://dashboard.pubguard.com or email support@pubguard.com. The key is used in both the iOS and Android installations. Please note that separate keys are used for Android and iOS installations.
+Before installing the Pubguard library you will need an API key which is available through your Pubguard account. To retrieve an API key, please access http://dashboard.pubguard.com or email support@pubguard.com. The key is used in both the iOS and Android installations. Please note that separate keys are used for Android Google Play and iOS installations.
 If you do not have a Pubguard account, please sign up on https://pubguard.com/
 
 ## Requirements
@@ -189,7 +189,7 @@ For all release notes and previous versions please see our [changelog](ChangeLog
 
 ### Advertising SDK support
 
-These are SDKs specifically supported by Pubguard to analyse advertising content in your app, if you would like information on a version or vendor that is not on this list please email support@pubguard.com
+These are ad network SDKs specifically supported by Pubguard to analyse advertising content in your app, if you would like information on a version or vendor that is not on this list please email support@pubguard.com
 
 | Company/Product           | Android SDK identifier                        | Android versions                                              |
 | ------------------------- | --------------------------------------------- | ------------------------------------------------------------- |
