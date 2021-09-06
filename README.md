@@ -4,9 +4,9 @@
 
 # Pubguard Android Library
 
-A guide to installing Pubguard on your Android application
+A guide to installing Pubguard on your Android Google Play Store application
 
-The Pubguard Library is a solution that monitors the advertising content flowing through your mobile app, protecting against unwanted content and optimizing revenues.
+The Pubguard library is a solution that monitors the advertising content flowing through your mobile app, protecting user against unwanted ad content.
 
 The data from the library is then accessible via your account on the Pubguard dashboard where you can set up preferences, alerts and browse the gallery.
 
@@ -26,13 +26,14 @@ The data from the library is then accessible via your account on the Pubguard da
 
 # Getting Started
 
-These instructions will enable you to get the Pubguard library running on your Android app.  
+The following instructions will enable you to get the Pubguard library running on your Android app.  
 - iOS instructions can be found [here](https://github.com/bidstack-group/pubguard-sdk-ios)
 - Unity instructions can be found [here](https://github.com/bidstack-group/pubguard-unity-plugin)
 
 ## Prerequisites
 
-Before installing the Pubguard library you will need an application key that is available from your account, to receive an API key please sign up from http://dashboard.pubguard.com or email support@pubguard.com. The key is used in both the iOS and Android installations.
+Before installing the Pubguard library you will need an API key which is available through your Pubguard account. To retrieve an API key, please access http://dashboard.pubguard.com or email support@pubguard.com. The key is used in both the iOS and Android installations. Please note that separate keys are used for Android Google Play and iOS installations.
+If you do not have a Pubguard account, please sign up on https://pubguard.com/
 
 ## Requirements
 
@@ -188,7 +189,7 @@ For all release notes and previous versions please see our [changelog](ChangeLog
 
 ### Advertising SDK support
 
-These are SDKs designed specifically for serving advertising content into your app, if you would like information on a version or vendor that is not on this list please email support@pubguard.com
+These are ad network SDKs specifically supported by Pubguard to analyse advertising content in your app, if you would like information on a version or vendor that is not on this list please email support@pubguard.com
 
 | Company/Product           | Android SDK identifier                        | Android versions                                              |
 | ------------------------- | --------------------------------------------- | ------------------------------------------------------------- |
