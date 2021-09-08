@@ -2,13 +2,13 @@
   <img src="images/pg-logo.png"/>
 </p>
 
-# Pubguard Android Library
+# Pubguard Android Framework
 
 A guide to installing Pubguard on your Android Google Play Store application
 
-The Pubguard library is a solution that monitors the advertising content flowing through your mobile app, protecting user against unwanted ad content.
+The Pubguard framework is a solution that monitors the advertising content flowing through your mobile app, protecting user against unwanted ad content.
 
-The data from the library is then accessible via your account on the Pubguard dashboard where you can set up preferences, alerts and browse the gallery.
+The data from the framework is then accessible via your account on the Pubguard dashboard where you can set up preferences, alerts and browse the gallery.
 
 ---
 
@@ -26,13 +26,13 @@ The data from the library is then accessible via your account on the Pubguard da
 
 # Getting Started
 
-The following instructions will enable you to get the Pubguard library running on your Android app.  
+The following instructions will enable you to get the Pubguard framework running on your Android app.  
 - iOS instructions can be found [here](https://github.com/bidstack-group/pubguard-sdk-ios)
 - Unity instructions can be found [here](https://github.com/bidstack-group/pubguard-unity-plugin)
 
 ## Prerequisites
 
-Before installing the Pubguard library you will need an API key which is available through your Pubguard account. To retrieve an API key, please access http://dashboard.pubguard.com or email support@pubguard.com. The key is used in both the iOS and Android installations. Please note that separate keys are used for Android Google Play and iOS installations.
+Before installing the Pubguard framework you will need an API key which is available through your Pubguard account. To retrieve an API key, please access http://dashboard.pubguard.com or email support@pubguard.com. The key is used in both the iOS and Android installations. Please note that separate keys are used for Android Google Play and iOS installations.
 If you do not have a Pubguard account, please sign up on https://pubguard.com/
 
 ## Requirements
@@ -150,7 +150,7 @@ If you do not have a Pubguard account, please sign up on https://pubguard.com/
 
 </details>
 
-### Initialising the Library
+### Initialising the Framework
 
 The Pubguard SDK should be initialized once at app launch. It is recommended to initialize the SDK in the Application subclass. Here's an example of how to call the init method in the Application subclass:
 
