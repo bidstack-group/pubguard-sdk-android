@@ -57,7 +57,7 @@ If you do not have a Pubguard account, please sign up on https://pubguard.com/
             mavenCentral()
         }
         dependencies {
-            classpath 'com.pubguard:pubguard-gradle-plugin:1.0.1'
+            classpath 'com.pubguard:pubguard-gradle-plugin:1.0.2'
         }
     }
 
@@ -77,7 +77,7 @@ If you do not have a Pubguard account, please sign up on https://pubguard.com/
     }
     
     dependencies {
-        implemetation 'com.pubguard:pubguard:1.0.1'
+        implemetation 'com.pubguard:pubguard:1.0.2'
     }
     ```
 #### Installing locally
@@ -85,8 +85,8 @@ If you do not have a Pubguard account, please sign up on https://pubguard.com/
 <details>
   <summary>Click to expand</summary> 
   
-  1. Download pubguard-1.0.1.aar and pubguard-gradle-plugin-1.0.1.jar from [releases](https://github.com/bidstack-group/pubguard-sdk-android-dev/releases)
-  2. Copy pubguard-1.0.1.aar and pubguard-gradle-plugin-1.0.1.jar into your main app module libs folder
+  1. Download pubguard-1.0.2.aar and pubguard-gradle-plugin-1.0.2.jar from [releases](https://github.com/bidstack-group/pubguard-sdk-android-dev/releases)
+  2. Copy pubguard-1.0.2.aar and pubguard-gradle-plugin-1.0.2.jar into your main app module libs folder
   3. Into project's `build.gradle` add:
 
         ```groovy
@@ -96,7 +96,7 @@ If you do not have a Pubguard account, please sign up on https://pubguard.com/
                 mavenCentral()
             }
             dependencies {
-                classpath files('app/libs/pubguard-gradle-plugin-1.0.1.jar')
+                classpath files('app/libs/pubguard-gradle-plugin-1.0.2.jar')
                 classpath "org.aspectj:aspectjtools:1.9.6"
                 classpath "org.aspectj:aspectjrt:1.9.6"
                 classpath "org.javassist:javassist:3.28.0-GA"
@@ -124,7 +124,7 @@ If you do not have a Pubguard account, please sign up on https://pubguard.com/
         dependencies {
 
             // Pubguard
-            implementation files('libs/pubguard-1.0.1.aar')
+            implementation files('libs/pubguard-1.0.2.aar')
 
             // android
             implementation 'androidx.core:core-ktx:1.3.2'
