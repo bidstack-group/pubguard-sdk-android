@@ -202,7 +202,7 @@ These are ad network SDKs specifically supported by Pubguard to analyse advertis
 | InMobi                    | com.inmobi.monetization:inmobi-ads            | 9.0.1;<br/> 9.1.0                                             |
 | ironSource                | com.ironsource.sdk:mediationsdk               | 6.14.0.1;<br/>6.16.1;<br/> 6.18.0 - 7.0.3;<br/>7.1.1 - 7.1.5.1;<br> |
 | MoPub                     | com.mopub:mopub-sdk                           | 5.14.0;<br/>5.16.4-5.18.0                                     |
-| Smaato                    | com.smaato.android.sdk:smaato-sdk             | 21.5.3 - 21.5.4                                               |
+| Smaato                    | com.smaato.android.sdk:smaato-sdk             | 21.5.3 - 21.5.4;<br/>21.6.1 - 21.6.3                          |
 | Unity Ads                 | com.unity3d.ads:unity-ads                     | 3.4.2 - 3.5.0; 3.6.0;<br/>3.7.2 - 3.7.5                       |
 | Verizon                   | com.verizon.ads:android-vas-standard-edition  | 1.2.0;<br/>1.8.0 - 1.8.2;<br/>1.12.0 - 1.13.0                 |
 | Vungle                    | com.vungle:publisher-sdk-android              | 6.7.1 - 6.8.1;<br/>6.9.1 - 6.10.2                             |
