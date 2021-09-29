@@ -193,7 +193,7 @@ These are ad network SDKs specifically supported by Pubguard to analyse advertis
 
 | Company/Product           | Android SDK identifier                        | Android versions                                              |
 | ------------------------- | --------------------------------------------- | ------------------------------------------------------------- |
-| AdColony                  | com.adcolony:sdk                              | 4.1.0 - 4.3.0;<br/> 4.6.1 - 4.6.3                             |
+| AdColony                  | com.adcolony:sdk                              | 4.1.0 - 4.3.0;<br/> 4.6.1 - 4.6.4                             |
 | AdMob                     | com.google.android.gms:play-services-ads      | 19.0.0 - 20.4.0                                               |
 | AppLovin                  | com.applovin:applovin-sdk                     | 9.14.4 - 9.14.5                                               |
 | Chartboost                | com.chartboost:chartboost-sdk                 | 7.5.0;<br/> 8.1.0 - 8.2.1                                     |
