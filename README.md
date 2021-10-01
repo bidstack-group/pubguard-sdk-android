@@ -197,7 +197,6 @@ These are ad network SDKs specifically supported by Pubguard to analyse advertis
 | AdMob                     | com.google.android.gms:play-services-ads      | 19.0.0 - 20.4.0                                               |
 | AppLovin                  | com.applovin:applovin-sdk                     | 9.14.4 - 9.14.5                                               |
 | Chartboost                | com.chartboost:chartboost-sdk                 | 7.5.0;<br/> 8.1.0 - 8.2.1                                     |
-| Fyber FairBid             | com.fyber:fairbid-sdk                         | 3.6.0 - 3.7.0                                                 |
 | Fyber Marketplace         | com.fyber.vamp:core-sdk/:video-kit/:mraid-kit | 7.7.2;<br/> 7.8.2 - 7.8.4                                     |
 | InMobi                    | com.inmobi.monetization:inmobi-ads            | 9.0.1;<br/> 9.1.0                                             |
 | ironSource                | com.ironsource.sdk:mediationsdk               | 6.14.0.1;<br/>6.16.1;<br/> 6.18.0 - 7.0.3;<br/>7.1.1 - 7.1.5.1;<br> 7.1.8 - 7.1.10 |
