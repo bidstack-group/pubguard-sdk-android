@@ -57,7 +57,7 @@ If you do not have a Pubguard account, please sign up on https://pubguard.com/
             mavenCentral()
         }
         dependencies {
-            classpath 'com.pubguard:pubguard-gradle-plugin:1.2.0'
+            classpath 'com.pubguard:pubguard-gradle-plugin:1.3.0'
         }
     }
 
@@ -77,7 +77,7 @@ If you do not have a Pubguard account, please sign up on https://pubguard.com/
     }
     
     dependencies {
-        implemetation 'com.pubguard:pubguard:1.2.0'
+        implemetation 'com.pubguard:pubguard:1.3.0'
     }
     ```
 #### Installing locally
@@ -85,8 +85,8 @@ If you do not have a Pubguard account, please sign up on https://pubguard.com/
 <details>
   <summary>Click to expand</summary> 
   
-  1. Download pubguard-1.2.0.aar and pubguard-gradle-plugin-1.2.0.jar from [releases](https://github.com/bidstack-group/pubguard-sdk-android-dev/releases)
-  2. Copy pubguard-1.2.0.aar and pubguard-gradle-plugin-1.2.0.jar into your main app module libs folder
+  1. Download pubguard-1.3.0.aar and pubguard-gradle-plugin-1.3.0.jar from [releases](https://github.com/bidstack-group/pubguard-sdk-android-dev/releases)
+  2. Copy pubguard-1.3.0.aar and pubguard-gradle-plugin-1.3.0.jar into your main app module libs folder
   3. Into project's `build.gradle` add:
 
         ```groovy
@@ -96,7 +96,7 @@ If you do not have a Pubguard account, please sign up on https://pubguard.com/
                 mavenCentral()
             }
             dependencies {
-                classpath files('app/libs/pubguard-gradle-plugin-1.2.0.jar')
+                classpath files('app/libs/pubguard-gradle-plugin-1.3.0.jar')
                 classpath "org.javassist:javassist:3.28.0-GA"
             }
         }
@@ -122,7 +122,7 @@ If you do not have a Pubguard account, please sign up on https://pubguard.com/
         dependencies {
 
             // Pubguard
-            implementation files('libs/pubguard-1.2.0.aar')
+            implementation files('libs/pubguard-1.3.0.aar')
 
             // android
             implementation 'androidx.core:core-ktx:1.3.2'
@@ -135,9 +135,9 @@ If you do not have a Pubguard account, please sign up on https://pubguard.com/
             implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3'
 
             // networking
-            implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+            implementation 'com.squareup.retrofit2:retrofit:2.6.4'
             implementation 'com.squareup.retrofit2:converter-protobuf:2.6.4'
-            implementation 'com.google.protobuf:protobuf-java:3.6.1'
+            implementation 'com.google.protobuf:protobuf-java:3.19.3'
 
             // other 
             implementation 'org.apache.commons:commons-text:1.9'
@@ -194,19 +194,19 @@ These are ad network SDKs specifically supported by Pubguard to analyse advertis
 | ------------------------- | --------------------------------------------- | ------------------------------------------------------------- |
 | AdColony                  | com.adcolony:sdk                              | 4.1.0 - 4.3.0;<br/> 4.6.1 - 4.6.5                             |
 | AdMob                     | com.google.android.gms:play-services-ads      | 19.0.0 - 20.5.0                                               |
-| AppLovin                  | com.applovin:applovin-sdk                     | 9.14.4 - 9.14.5;<br/> 10.3.1 - 10.3.5                         |
-| Chartboost                | com.chartboost:chartboost-sdk                 | 7.5.0;<br/> 8.1.0 - 8.2.1                                     |
+| AppLovin                  | com.applovin:applovin-sdk                     | 9.14.4 - 9.14.5;<br/> 10.3.1 - 11.0.0                         |
+| Chartboost                | com.chartboost:chartboost-sdk                 | 7.5.0;<br/> 8.1.0 - 8.3.1                                     |
 | Fyber Marketplace         | com.fyber.vamp:core-sdk/:video-kit/:mraid-kit | 7.7.2;<br/> 7.8.2 - 7.8.4                                     |
 | InMobi                    | com.inmobi.monetization:inmobi-ads            | 9.0.1;<br/> 9.1.0;<br/> 9.1.7 - 10.0.1                        |
-| ironSource                | com.ironsource.sdk:mediationsdk               | 6.14.0.1;<br/>6.16.1;<br/> 6.18.0 - 7.0.3;<br/>7.1.1 - 7.1.5.1;<br> 7.1.8 - 7.1.12.1 |
-| Mintegral                 | com.mbridge.msdk:mbbanner/:reward/:interstitial/...| 15.6.21 - 15.7.51                                        |
+| ironSource                | com.ironsource.sdk:mediationsdk               | 6.14.0.1;<br/>6.16.1;<br/> 6.18.0 - 7.0.3;<br/>7.1.1 - 7.1.5.1;<br> 7.1.8 - 7.1.14 |
+| Mintegral                 | com.mbridge.msdk:mbbanner/:reward/:interstitial/...| 15.6.21 - 15.8.01                                        |
 | MoPub                     | com.mopub:mopub-sdk                           | 5.14.0;<br/>5.16.4-5.18.0                                     |
-| Smaato                    | com.smaato.android.sdk:smaato-sdk             | 21.5.3 - 21.5.4;<br/>21.6.1 - 21.6.7                          |
-| Tapjoy                    | com.tapjoy:tapjoy-android-sdk                 | 12.6.1 - 12.8.1                                               |
-| Unity Ads                 | com.unity3d.ads:unity-ads                     | 3.4.2 - 3.5.0; 3.6.0;<br/>3.7.2 - 3.7.5                       |
+| Smaato                    | com.smaato.android.sdk:smaato-sdk             | 21.5.3 - 21.5.4;<br/>21.6.1 - 21.6.9                          |
+| Tapjoy                    | com.tapjoy:tapjoy-android-sdk                 | 12.6.1 - 12.9.0                                               |
+| Unity Ads                 | com.unity3d.ads:unity-ads                     | 3.4.2 - 3.5.0; 3.6.0;<br/>3.7.2 - 4.0.0                       |
 | Verizon                   | com.verizon.ads:android-vas-standard-edition  | 1.2.0;<br/>1.8.0 - 1.8.2;<br/>1.12.0 - 1.14.0                 |
-| Vungle                    | com.vungle:publisher-sdk-android              | 6.7.1 - 6.8.1;<br/>6.9.1 - 6.10.2                             |
-| Verve HyBid               | net.pubnative:hybid.sdk                       | 2.5.2 - 2.8.1;                                                |
+| Vungle                    | com.vungle:publisher-sdk-android              | 6.7.1 - 6.8.1;<br/>6.9.1 - 6.10.3                             |
+| Verve HyBid               | net.pubnative:hybid.sdk                       | 2.5.2 - 2.9.0;                                                |
 
 ---
 
